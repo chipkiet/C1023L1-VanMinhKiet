@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Tạo form lấy survey khách hàng </title>
+</head>
+<body>
+<h1>Market Research Survey</h1>
+<p>Please take a few moments to complete this satisfaction survey.</p><hr/>
+<label for="age"><strong>What is your age range?</strong><br/>
+    <select id="age">
+        <option value="age">18-24</option>
+        <option value="age">24-34</option>
+        <option value="age">35-50</option>
+        <option value="age">50+</option>
+    </select><br/>
+</label><br/>
+<label for="cost"><Strong>What is your yearly income range?</STRONG><br/>
+    <select id="cost">
+        <option value="cost">$0-$25,000</option>
+        <option value="cost">$25,001-$50000</option>
+        <option value="cost">$50,001-$100,000</option>
+        <option value="cost">$100,000+</option>
+    </select>
+</label><br/><BR/>
+<label for="GI"><STRONG>Gender Identity</STRONG></label><BR/>
+<label><input name="GI" type="radio"> Male</label><br/>
+<label><input name="GI" type="radio"> Female</label><br/>
+<label><input name="GI" type="radio"> Nonbinary</label><br/>
+<label><input name="GI" type="radio"> Other</label><br/>
+<label><input id="GI" type="text"></label><br/><br/>
+
+<label for="product"><strong>Which of the following products have your purchased in the last 2 months. Please check all that apply.</strong></label>
+<form id="product">
+<label><input name="product" value="1" type="checkbox"> Product 1</label><br/>
+    <label><input name="product" value="2" type="checkbox"> Product 2</label><br/>
+    <label><input name="product" value="3" type="checkbox"> Product 3</label><br/>
+</form><BR/>
+<label for="gi"><STRONG>How often would you use our new product?</STRONG></label><BR/>
+<label><input name="day" value="daily" type="radio"> Daily</label><br/>
+<label><input name="day" value="weekly" type="radio"> Weekly</label><br/>
+<label><input name="day" value="monthly" type="radio"> Monthly</label><br/><br/>
+
+<strong>What would you pay for the new product?</strong>
+<div style="display:flex;gap: 8px;">
+    <span>$</span>
+    <div>
+        <input type="text">
+        <p>Dollars</p>
+    </div>
+    <span>.</span>
+    <div>
+        <input type="text">
+        <p>Cents</p>
+    </div>
+</div>
+
+    <strong>What features would you like to see in the new product.</strong><br/>
+    <input type="text" style="width:1500px; height:100px">
+<p>Please rate your level of agreement with the following statements.</p>
+<form>
+
+</form>
+<table border=1">
+    <tr>
+        <th></th>
+        <th>Strongly Disagree</th>
+        <th>Disagree</th>
+        <th>Agree</th>
+        <th>Strongly Agree</th>
+    </tr>
+    <tr>
+        <th>Our products are priced fairly.</th>
+        <th>
+            <div>
+                <input type="radio" id="1_1" name="number1">
+            </div>
+            <label for="1_1">1</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="1_2"name="number2">
+            </div>
+            <label for="1_2">2</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="1_3"name="number3">
+            </div>
+            <label for="1_3">3</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="1_4"name="number4">
+            </div>
+            <label for="1_4">4</label>
+        </th>
+
+    </tr>
+    <tr>
+        <th>
+
+            <label>Our products are high quality.</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="2_1"name="number1">
+            </div>
+            <label for="2_1">1</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="2_2"name="number2">
+            </div>
+            <label for="2_2">2</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="2_3"name="number3">
+            </div>
+            <label for="2_3">3</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="2_4"name="number4">
+            </div>
+            <label for="2_4">4</label>
+        </th>
+
+    </tr>
+    <tr>
+        <th>
+
+            <label>Our products are high quality.</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="3_1"name="number1">
+            </div>
+            <label for="3_1">1</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="3_2"name="number2">
+            </div>
+            <label for="3_2">2</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="3_3"name="number3">
+            </div>
+            <label for="3_3">3</label>
+        </th>
+        <th>
+            <div>
+                <input type="radio" id="3_4"name="number4">
+            </div>
+            <label for="3_4">4</label>
+        </th>
+
+    </tr>
+</table>
+<button style="width: 100px; padding: 5px;margin-top: 10px;" type="submit">Submit</button>
+</body>
+</html>
