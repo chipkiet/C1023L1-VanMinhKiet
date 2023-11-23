@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2</title>
+</head>
+<body>
+<table>
+  <tr>
+      <th>Amount</th>
+      <th>From Currency</th>
+      <th>To Currency</th>
+  </tr>
+  <tr>
+       <td><input id="money" type="text"></td>
+      <td>
+          <select id="from">
+              <option value="vnd">VietNam</option>
+              <option value="usd">USD</option>
+          </select>
+      </td>
+      <td>
+          <select id="to">
+              <option value="vnd">VietNam</option>
+              <option value="usd">USD</option>
+          </select>
+      </td>
+  </tr>
+   <tr>
+       <td><button onclick="chuyenTien()">Convert</button></td>
+   </tr>
+    <script>
+        function chuyenTien(){
+            let tien=document.getElementById("money").value;
+            let from1=document.getElementById("from").value;
+            let to1=document.getElementById("to").value;
+            let result;
+            if((from1=="usd")&&(to1=="vnd")){
+                result=tien*23000;
+            }
+            if ((from1=="vnd")&&(to1=="usd")){
+                result=tien/23000;
+            }
+            alert(result);
+        }
+    </script>
+</table>
+</body>
+</html>
