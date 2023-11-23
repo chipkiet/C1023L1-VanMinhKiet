@@ -13,6 +13,12 @@
             <input type="button" value="Cộng" onclick="cong()">
             <button onclick="tru()">Trừ</button>
         </td>
+
+    </tr>
+    <tr>
+        <td><b>Result: </b></td>
+        <td><p id="kqua">chip</p></td>
+
     </tr>
     <script>
 
@@ -21,13 +27,14 @@
             let num1 = parseInt(document.getElementById("so1").value);
             let num2 = parseInt(document.getElementById("so2").value);
             result= num1+ num2;
-            alert(result);
+            document.getElementById("kqua").innerHTML=result;
+
         }
         function tru(){
             let num1= parseInt(document.getElementById("so1").value);
             let num2 = parseInt(document.getElementById("so2").value);
             result=num1-num2;
-            alert(result);
+            document.getElementById("kqua").innerHTML=result;
         }
     </script>
 
