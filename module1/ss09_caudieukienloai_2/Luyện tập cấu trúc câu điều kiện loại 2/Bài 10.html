@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{
+            border:1px solid black;
+        }
+        th{
+            border:1px solid black;
+        }
+        td{
+            border:1px solid black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<h2>Viết chương trình tính giá điện</h2>
+<table>
+    <tr>
+        <th>TT</th>
+        <th>Số KWh sử dụng</th>
+        <th>Gía bán điện(đồng/KWh)</th>
+    </tr>
+    <tr>
+        <td>Bậc 1</td>
+        <td>Cho kWh từ 0 - 50</td>
+        <td>1.678</td>
+    </tr>
+    <tr>
+        <td>Bậc 2</td>
+        <td>Cho kWh từ 51 - 100</td>
+        <td>1.734</td>
+    </tr>
+    <tr>
+        <td>Bậc 3</td>
+        <td>Cho kWh từ 101 - 200</td>
+        <td>2.014</td>
+    </tr>
+    <tr>
+        <td>Bậc 4</td>
+        <td>Cho kWh từ 201 - 300</td>
+        <td>2.536</td>
+    </tr>
+    <tr>
+        <td>Bậc 5</td>
+        <td>Cho kWh từ 301 - 400</td>
+        <td>2.834</td>
+    </tr>
+    <tr>
+        <td>Bậc 6</td>
+        <td>Cho kWh từ 401 trở lên</td>
+        <td>2.927</td>
+    </tr>
+</table></br></br>
+
+<input id="so" type="text" placeholder="Nhập số KWh sử dụng">
+<button onclick="chip()">Tính toán</button>
+<p id="demo"></p>
+<script>
+    function chip(){
+        let kwh=parseInt(document.getElementById("so").value);
+        let tien;
+        let bac1=1678, bac2=1734, bac3=2014, bac4=2536, bac5=2834, bac6=2927;
+    if(kwh<0){
+        document.getElementById("demo").innerHTML="Vui lòng nhập lại đi mày"
+    }else if(kwh<50){
+        tien=kwh*bac1;
+        document.getElementById("demo").innerHTML="Bạn dùng điện từ 0-50 nên phải trả:"+" "+tien;
+    }else if(kwh<=100){
+        tien=50*bac1+(kwh-50)*bac2;
+        document.getElementById("demo").innerHTML="Bạn dùng điện từ 50-100 nên phải trả:"+" "+tien;
+    }else if(kwh<=200){
+        tien=50*bac1+50*bac2+(kwh-100)*bac3;
+        document.getElementById("demo").innerHTML="Bạn dùng điện từ 100-200 nên phải trả:"+" "+tien;
+    }else if(kwh<=300){
+        tien=50*bac1+50*bac2+100*bac3+(kwh-200)*bac4;
+        document.getElementById("demo").innerHTML="Bạn dùng điện từ 200-300 nên phải trả:"+" "+tien;
+    }else if(kwh<=400){
+        tien=50*bac1+50*bac2+100*bac3+100*bac4+(kwh-300)*bac5;
+        document.getElementById("demo").innerHTML="Bạn dùng điện từ 300-400 nên phải trả:"+" "+tien;
+    }else if(kwh<=500){
+        tien=50*bac1+50*bac2+100*bac3+100*bac4+100*bac5+(kwh-400)*bac6;
+        document.getElementById("demo").innerHTML="Bạn dùng điện từ 400-500 nên phải trả:"+" "+tien;
+    }
+    }
+</script>
+</body>
+</html>
