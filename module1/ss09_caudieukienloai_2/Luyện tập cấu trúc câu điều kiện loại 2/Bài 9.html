@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<h2>Kiểm tra 3 cạnh của một tam giác</h2>
+<input id="soa" type="text" placeholder="nhập chiều dài cạnh a">
+<input id="sob" type="text" placeholder="nhập chiều dài cạnh b">
+<input id="soc" type="text" placeholder="nhập chiều dài cạnh c">
+<button onclick="chip()">Tap tap</button>
+<p id="demo"></p>
+<script>
+    function chip(){
+        let a=parseInt(document.getElementById("soa").value);
+        let b=parseInt(document.getElementById("sob").value);
+        let c=parseInt(document.getElementById("soc").value);
+        let result;
+        if ((a<0)&&(b<0)&&(c<0)){
+            document.getElementById("demo").innerHTML="Không phải 3 cạnh tam giác";
+        }
+         if((a>0)&&(b>0)&&(c>0)){
+            if (a+b>c){
+                if(a+c>b){
+                    if(b+c>a){
+                        document.getElementById("demo").innerHTML="Đây là 3 cạnh của tam giác";
+                    }else{
+                        document.getElementById("demo").innerHTML="Không phải 3 cạnh tam giác";
+                    }
+                }else {
+                    document.getElementById("demo").innerHTML="Không phải 3 cạnh tam giác";
+                }
+            }else {
+                document.getElementById("demo").innerHTML="Không phải 3 cạnh tam giác";
+            }
+
+        }
+        else{
+            document.getElementById("demo").innerHTML="Không phải 3 cạnh tam giác";
+        }
+    }
+
+</script>
+</body>
+</html>

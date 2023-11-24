@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra độ tuổi</title>
+</head>
+<body>
+<h2>Kiểm tra độ tuổi</h2>
+<input id="dotuoi" type="text">
+<button onclick="chip()">Tap</button>
+<p id="demo">Hiển thị</p>
+<script>
+    function chip(){
+        let tuoi=parseInt(document.getElementById("dotuoi").value);
+        if ((0<tuoi)&&(tuoi<120)){
+            document.getElementById("demo").innerHTML="Tuổi của một người là"+ " "+tuoi;
+        }
+
+    }
+
+</script>
+</body>
+</html>
