@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm bài</title>
+</head>
+<body>
+<h2>Xếp hạng học sinh dựa trên điểm số </h2>
+<input id="dkt" type="text" placeholder="Điểm Kiểm Tra">
+<input id="dgk" type="text" placeholder="Điểm Giữa Kì">
+<input id="dck" type="text" placeholder="Điểm Cuối Kì">
+<button onclick="chip()">Tìm kiếm</button>
+<p id="demo">Xếp học lực</p>
+<script>
+    function chip() {
+        let kt=parseFloat(document.getElementById("dkt").value);
+        let gk=parseFloat(document.getElementById("dgk").value);
+        let ck=parseFloat(document.getElementById("dck").value);
+        let kq = (kt+gk+ck)/3;
+        if (kq>8.0){
+            document.getElementById("demo").innerHTML="Học lực giỏi";
+        }
+        if ((6.5<kq)&&(kq<8.0)){
+            document.getElementById("demo").innerHTML="Học lực khá";
+        }
+        if((2.5<kq)&&(kq<6.5)){
+            document.getElementById("demo").innerHTML="Học lực trung bình";
+        }
+        if (kq<2.5){
+            document.getElementById("demo").innerHTML="Học lực ngu";
+        }
+
+
+    }
+</script>
+
+</body>
+</html>
