@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2</title>
+</head>
+<body>
+<h2>Kiểm tra độ tuổi của học sinh</h2>
+<input id="tuoi" type="text" placeholder="Nhập tuổi">
+<button onclick="chip()">Nhấn</button>
+<p id="demo">Xét xem</p>
+<script>
+    function chip(){
+let dotuoi=parseInt(document.getElementById("tuoi").value);
+let result;
+        if (dotuoi>16){
+            result="Đủ điều kiện";
+        }
+        else {
+            result="Chưa đủ điều kiện";
+        }
+        alert(result);
+
+
+    }
+</script>
+
+</body>
+</html>
