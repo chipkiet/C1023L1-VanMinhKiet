@@ -6,7 +6,46 @@
 </head>
 <body>
 <h2>Gỉai phương trình bậc 2</h2>
+<p>a*x^2+b*x+c=0</p>
+<input id="soa" type="text" placeholder="Nhập số a">
+<input id="sob" type="text" placeholder="Nhập số b">
+<input id="soc" type="text" placeholder="Nhập số c">
+<button onclick="chip()">Tap tap</button>
+<p>Gía trị x:</p>
+<p id="demo"></p>
+<script>
+    let delta;
+    function chip(){
+        let a=parseInt(document.getElementById("soa").value);
+        let b=parseInt(document.getElementById("sob").value);
+        let c=parseInt(document.getElementById("soc").value);
+        let x;
+        let can;
+        if (a==0){
+            alert("Đây là phương trình bậc 2");
+            x=-c/b;
+            document.getElementById("demo").innerHTML=x;
+        }
+        else if (a!=0) {
+            delta = b * b - 4 * a * c;
+            if (delta < 0) {
+                document.getElementById("demo").innerHTML = "phương trình vô nghiệm";
+            } else if (delta == 0) {
+                x = -b / 2 * a;
+                document.getElementById("demo").innerHTML = "phương trình có nghiệm kép x1=x2=" + " " + x;
+            } else {
+                let x1;
+                let x2;
+                can = Math.sqrt(delta);
+                x1 = (-b + can) / 2 * a;
+                x2 = (-b - can) / 2 * a;
+                document.getElementById("demo").innerHTML = "Phương trình có nghiệm x1= +" + " " + x1 + "và" + " nghiệm x2=" + " " + x2;
 
 
+            }
+
+
+        }}
+</script>
 </body>
 </html>
