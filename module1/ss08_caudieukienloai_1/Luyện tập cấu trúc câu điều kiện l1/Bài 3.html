@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h2>Tìm số</h2>
+<input id="timso" type="number" placeholder="Nhập số">
+<button onclick="chip()">Tìm</button>
+<p id="demo">Hiển thị số </p>
+<script>
+    function chip(){
+        let so=parseInt(document.getElementById("timso").value);
+        let result;
+        if(so>0){
+            result="Số"+" "+so+" "+"lớn hơn 0";
+        }
+        else{
+            result="Số"+" "+so+" "+"nhỏ hơn 0";
+        }
+        document.getElementById("demo").innerHTML=result;
+    }
+
+</script>
+</body>
+</html>
