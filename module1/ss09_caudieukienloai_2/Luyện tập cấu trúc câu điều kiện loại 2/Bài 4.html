@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 4</title>
+</head>
+<body>
+<h2> Diện tích hình chữ nhật khi biết hai cạnh a,b</h2>
+<input id="canha" type="text" placeholder="Nhập chiều dài">
+<input id="canhb" type="text" placeholder="Nhập chiều rộng">
+<button onclick="chip()">PUT</button>
+<p> Diện tích:</p>
+<p id="demo"></p>
+<script>
+    let s;
+    function chip(){
+        let ca=parseInt(document.getElementById("canha").value);
+        let cb=parseInt(document.getElementById("canhb").value);
+        s=ca*cb;
+        document.getElementById("demo").innerHTML=s;
+
+    }
+</script>
+
+</body>
+</html>

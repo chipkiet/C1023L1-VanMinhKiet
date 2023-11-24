@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập</title>
+</head>
+<body>
+<h1>Giai phương trình bậc 1</h1>
+<p>ax+b=0</p>
+<p>x=-b/a</p>
+<input id="soa" type="text" placeholder="Nhập số a">
+<input id="sob" type="text" placeholder="Nhập số b">
+<button onclick="chip()">Tính</button>
+<P>Gía trị của x :</P>
+<p id="demo"></p>
+<script>
+    function chip(){
+        let a=parseInt(document.getElementById("soa").value);
+        let b=parseInt(document.getElementById("sob").value);
+        let x;
+        if ((a==0)&&(b==0)){
+        document.getElementById("demo").innerHTML="x thỏa mãn mọi nghiệm";
+        }
+        else if ((a==0)&&(b!=0)){
+            document.getElementById("demo").innerHTML="x vô nghiệm";
+        }
+        else{
+            x=-b/a;
+            document.getElementById("demo").innerHTML=x;
+
+        }
+    }
+</script>
+</body>
+</html>
