@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+<h2>Viết chương trình thu thuế cá nhân</h2>
+<input id="traThue" type="number" placeholder="Tổng tiền lương nhận được"></br></br>
+<input id="mienThue" type="number" placeholder="Các khoản được miễn thuế"></br></br>
+<button onclick="chip()">Tính toán</button>
+<p id="demo"></p>
+<script>
+    function chip(){
+        let pay=parseInt(document.getElementById("traThue").value);
+        let free=parseInt(document.getElementById("mienThue").value);
+        let real= pay-free;
+        if(pay<5000000){
+            document.getElementById("demo").innerHTML="Số tiền phải trả là" + real*0.05 +"Đồng";
+        }else if(pay<10000000){
+            document.getElementById("demo").innerHTML="Số tiền phải trả là" + real*0.1 +"Đồng";
+        }else if(pay<18000000) {
+            document.getElementById("demo").innerHTML = "Số tiền phải trả là" + real * 0.15 + "Đồng";
+        }else if(pay<32000000) {
+            document.getElementById("demo").innerHTML = "Số tiền phải trả là" + real * 0.2 + "Đồng";
+        }else if(pay<52000000) {
+            document.getElementById("demo").innerHTML = "Số tiền phải trả là" + real * 0.25 + "Đồng";
+        }else if(pay<80000000) {
+            document.getElementById("demo").innerHTML = "Số tiền phải trả là" + real * 0.3 + "Đồng";
+        }else{
+            document.getElementById("demo").innerHTML = "Số tiền phải trả là" + real * 0.35 + "Đồng";
+        }
+
+
+    }
+</script>
+
+</body>
+</html>
