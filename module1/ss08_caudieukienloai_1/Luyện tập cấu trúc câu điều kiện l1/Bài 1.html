@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<input id="soa"type="text" placeholder="Nhập số a">
+<input id="sob"type="text" placeholder="Nhập số b">
+<button onclick="kq()">Kết qủa</button>
+<script>
+    function kq(){
+        let a=parseInt(document.getElementById("soa").value);
+        let b=parseInt(document.getElementById("sob").value);
+        let result;
+        if (a%b == 0){
+            result="a chia het cho b";
+        }
+
+        else{
+            result="a khong chia het cho b";
+        }
+        alert(result);
+
+
+    }
+
+
+
+</script>
+
+</body>
+</html>
