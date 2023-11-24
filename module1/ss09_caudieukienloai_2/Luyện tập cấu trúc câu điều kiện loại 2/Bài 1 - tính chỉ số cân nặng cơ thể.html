@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<h2>Chỉ số cân nặng cơ thể</h2>
+<table>
+    <tr>
+        <td>Nhập cân nặng : (kg)</td>
+        <td><input id="kg" type="text"></td>
+    </tr>
+    <tr>
+        <td>Nhập chiều cao :(m)</td>
+        <td><input id="m" type="text"></td>
+    </tr>
+    <tr>
+        <td><button onclick="result()">Kiểm tra</button></td>
+    </tr>
+
+    <script>
+
+        function result(){
+            let weight=parseFloat(document.getElementById("kg").value);
+            let height=parseFloat(document.getElementById("m").value);
+            let bmi= weight / (height *height);
+            if (bmi<18.5){
+                alert("Underweight");
+            } else if ((18.5<bmi)&&(bmi<25)){
+                alert("Normal");
+            }else if ((25<bmi)&&(bmi<30)){
+                alert("Overweight");
+            }else{
+                alert("Obese");
+            }
+        }
+
+    </script>
+</table>
+</body>
+</html>

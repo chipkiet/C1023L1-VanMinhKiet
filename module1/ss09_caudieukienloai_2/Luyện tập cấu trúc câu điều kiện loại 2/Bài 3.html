@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3</title>
+</head>
+<body>
+<h2> Tính diện tích hình vuông</h2>
+<input id="dt" type="text" placeholder="Nhập diện tích">
+<button onclick="chip()">Bấm </button>
+<p id="demo">Đây</p>
+<script>
+    let kq;
+    function chip(){
+        let m=parseInt(document.getElementById("dt").value);
+         kq=m*m;
+        document.getElementById("demo").innerHTML="Diện tích hình vuông là"+" "+kq;
+    }
+</script>
+</body>
+</html>
