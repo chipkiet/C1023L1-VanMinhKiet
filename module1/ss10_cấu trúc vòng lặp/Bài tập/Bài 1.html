@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let bcc;
+    bcc="<table>"
+    for (i=1;i<=9;i++){
+        bcc=bcc+"<tr>";
+        for (j=2;j<=9;j++){
+            bcc=bcc+"<td>"+j+"x"+i+"="  +i*j +"</td>";
+        }
+        bcc=bcc+"</tr>";
+    }
+    bcc=bcc+"</table>"
+    document.write(bcc);
+
+</script>
+</body>
+</html>
