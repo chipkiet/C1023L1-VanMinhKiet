@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table,td,th{
+            border: 1px solid;
+        }
+        table{
+            width: 100%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<script>
+    let bcc,i,j;
+    bcc="<table>";
+    i=1;
+    j=2;
+    while (i<=9){
+        bcc=bcc+"<tr>";
+        while (j<=9){
+            bcc=bcc+"<td>"+j+"x"+i+"="+j*i+"</td>";
+            j++;
+        }
+        bcc=bcc+"</tr>";
+        j=2;
+        i++;
+    }
+    bcc=bcc+"</table>"
+    document.write(bcc);
+
+
+</script>
+</body>
+</html>
