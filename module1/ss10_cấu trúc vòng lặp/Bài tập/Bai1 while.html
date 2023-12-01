@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        table,td,th{
-            border: 1px solid;
-        }
-        table{
-            width: 100%;
-        }
-    </style>
     <meta charset="UTF-8">
-    <title>Bai 1</title>
+    <title>Title</title>
 </head>
 <body>
+<input type="button" onclick="indayfibonacci()" value="INNN">
 <script>
-    let bcc,i,j;
-    bcc="<table>";
-    i=1;
-    j=2;
-    while (i<=9){
-        bcc=bcc+"<tr>";
-        while (j<=9){
-            bcc=bcc+"<td>"+j+"x"+i+"="+j*i+"</td>";
-            j++;
+    function indayfibonacci() {
+        let F = 0 , F0= 0, F1=0
+        let fibonacci = "";
+        for (let i=0; i<20;i++){
+            if(i==0){
+                F=1
+                F1=1
+                fibonacci += F+ " "
+            }else{
+                F= F0+F1
+                F0 = F1
+                F1 = F
+                fibonacci += F+ " "
+            }
         }
-        bcc=bcc+"</tr>";
-        j=2;
-        i++;
+        document.write(fibonacci)
     }
-    bcc=bcc+"</table>"
-    document.write(bcc);
-
-
 </script>
 </body>
 </html>

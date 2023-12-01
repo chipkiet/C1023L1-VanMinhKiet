@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h2>Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</h2>
+<input id="n" type="number" placeholder="Nhập n số để hiện thị mã fibonacci">
+<button onclick="chip()">Nhập</button>
+<script>
+    function chip(){
+        let number= parseInt(document.getElementById("n").value);
+        let a=1, b=1, c;
+        document.write(a+"<br>");
+        document.write(b+"<br>");
+        for (let i=2;i<number;i++) {
+                    c = a + b;
+                    a = b;
+                    b = c;
+            document.write(c+"<br>");
+                }
+    }
+
+</script>
+</body>
+</html>
