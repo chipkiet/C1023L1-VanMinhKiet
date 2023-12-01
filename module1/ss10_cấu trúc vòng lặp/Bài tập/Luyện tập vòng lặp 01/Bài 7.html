@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<p>Hãy viết một chương trình in ra các số từ 1 đến 100.
+    Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó.
+    Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</p>
+<button onclick="chip()">Nhập</button>
+<script>
+    function chip(){
+        let so=" ";
+        for (let i=1;i<=100;i++){
+            if ((i%3===0)&&(i%5!==0)){
+                so+="Fizz"+"<br>";
+                continue;
+            }
+            else if((i%3!==0)&&(i%5===0)){
+                so+="Buzz"+"<br>";
+            }else if ((i%3===0)&&(i%5===0)){
+                so+="FizzBuzz"+"<br>";
+            }
+            else{
+                so+=i+"<br>";
+            }
+
+
+        }
+        document.write(so);
+
+    }
+</script>
+</body>
+
+</html>
