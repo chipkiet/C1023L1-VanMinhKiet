@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<h2>Tính giai thừa của một số nguyên dương</h2>
+<input id="n" type="number">
+<button onclick="chip()">Nhấn</button>
+<script>
+    function chip(){
+        let gt=1;
+        let number=parseInt(document.getElementById("n").value);
+        for (let i=1;i<number;i++){
+            gt*=i;
+        }
+
+        document.write(gt)
+    }
+</script>
+</body>
+</html>
