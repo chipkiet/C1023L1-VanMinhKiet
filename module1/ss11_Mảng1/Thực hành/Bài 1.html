@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Thực Hành 1</title>
+</head>
+<body>
+<h2>[Thực hành] Tạo và thao tác với mảng</h2>
+<h3>Sample Screen</h3>
+<input type="text" id="txtValue">
+<button onclick="buadd()">ADD</button>
+<button onclick="budisplay()">Display</button>
+<script>
+    let x=0;// x là chỉ số truy cập tới các phần tử trong mảng
+    let array = Array(); // tạo mảng array để lưu các giá trị nhập vào
+    function buadd(){
+        array[x]=document.getElementById("txtValue").value;// lấy gt-text; gán vào pt x khi hàm chip() được gọi
+        alert("Element"+ " " +array[x] +" "+ "Added at index" +" "+ x);// hiển thị
+        x++;
+        document.getElementById("txtValue").value=""; //gán giá trị rỗng cho text
+    }
+    function budisplay(){
+        let e= "<hr/>";//Tạo biến e để lưu thẻ <hr> mỗi lần hiển thị một phần tử thẻ <hr> sử dụng để phân cách các phần tử trong mảng: var e = "<hr/>"
+        for (let i=0; i<array.length;i++){//Dùng vòng lặp for duyệt toàn bộ mảng: for (var i=0; i<array.length; i++)
+            e+= "Element" +" "+ i + "=" +" "+array[i] +"<br/>"//Mỗi lần duyệt lấy giá trị của các phần tử cộng dồn vào biến e. Thêm thẻ <br/> cuối mỗi lần duyệt.
+
+
+        }
+        document.write(e);
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>
