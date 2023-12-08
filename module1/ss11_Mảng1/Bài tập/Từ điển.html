@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm từ điển</title>
+</head>
+<body>
+<p>Làm từ điển</p>
+<p>Nhập từ</p>
+<input id="tuDien" type="text">
+<button onclick="chip()">Dịch</button>
+<p id="demo"></p>
+<script>
+    function chip(){
+        let arr_eng=["brother","sister","father","mother","grandfather","grandmother"];
+        let arr_vie=["anh","chị","bố","mẹ","ông","bà"];
+        let tuDien=document.getElementById("tuDien").value;
+        let index_eng = 0;
+        let result = "";
+        for (let i=0; i<arr_eng.length;i++){
+            if (tuDien==arr_eng[i]){
+                index_eng=i;
+                for (let j=0;j<arr_vie.length;j++){
+                    if (index_eng == j){
+                        result=arr_vie[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("demo").innerHTML=result;
+    }
+
+</script>
+</body>
+</html>
