@@ -7,21 +7,29 @@
 <body>
 <p>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
     Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
-    (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)</p>
+    (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của
+    mảng)</p>
 <script>
-    let arr =[];
-    while (true){
+    let arr = [];
+    let v = +prompt("v: ");
+    while (true) {
         num = +prompt("Ghi");
         arr.push(num);
-        if (arr.length>10){
+        if (arr.length >= 10) {
             break;
         }
-    }document.write("Dãy 10 phần tử : "+arr+"<br>");
-    for (let i=0; i<arr.length;i++) {
-        if (arr[i] % 1 == 0) {
-            (arr[i] = arr[i + 1])&&(arr[i + 1] = "");
+    }
+    document.write("Dãy 10 phần tử : " + arr + "<br>");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === v) {
+            for (let j = i; j < arr.length  ; j++) {
+                arr[j] = arr[j + 1];
+                // arr[j+1]="";
+            }
         }
-    }document.write("Dãy số sau khi chuyển đổi : "+arr+"<br>");
+    }
+    arr[arr.length - 1] = 0;
+    document.write("Dãy số sau khi chuyển đổi : " + arr + "<br>");
 
 </script>
 </body>
