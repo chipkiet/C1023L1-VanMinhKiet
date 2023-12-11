@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<p>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+    Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</p>
+<script>
+    let arr = [];
+    while (true){
+        num = +prompt("Nhập số");
+        arr.push(num);
+        if (arr.length>=5){
+            break;
+        }
+    }
+
+    document.write("Mảng 10 số nguyên : "+ arr+"<br>" );
+    for (let i=0; i<arr.length;i++){
+       for (let j=0;j<arr.length;j++){
+           // if (arr[j]>arr[j+1]){
+           //     let temp = arr[j];
+           //     arr[j]=arr[j+1];
+           //     arr[j+1]= temp;
+           // }
+           if (arr[j]<arr[j+1]){
+               let temp=arr[j];
+               arr[j]=arr[j+1];
+               arr[j+1]=temp;
+           }
+       }
+    }
+    document.write("Dãy số sau khi chuyển đổi : " + arr + "<br>");
+</script>
+</body>
+</html>
