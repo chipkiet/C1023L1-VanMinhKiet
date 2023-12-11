@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<p>Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược</p>
+<script>
+    let arr=[];
+    while(true){
+        chuoi= prompt("Ghi những gì bạn muốn");
+        arr.push(chuoi)
+        if (arr.length>9){
+            break;
+        }
+    }document.write("Dòng chữ bạn đã nhập :   "+arr + "<br>");
+    for (let i=0; i<arr.length; i++){
+        for (let j=i; j<arr.length; j++){
+           let temp = arr [j];
+           arr[j]=arr[arr.length-j];
+            arr[arr.length-j]=temp;
+        }
+    }
+    document.write("Dòng chữ bạn đã nhập sau khi biến đổi : "+ arr);
+
+</script>
+</body>
+</html>
