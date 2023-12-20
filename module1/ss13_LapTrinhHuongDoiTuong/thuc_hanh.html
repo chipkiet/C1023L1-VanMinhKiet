@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check</title>
+</head>
+<body>
+<script>
+    // // function Student(id, name, address){
+    // //     this.id= id;
+    // //     this.name= name;
+    // //     this.address= address;
+    // //     this.getInfor = function (){
+    // //         return "ID = " + this.id + "NAME =" +this.name + "ADDRESS = "+this.address;
+    // //     }
+    // // }
+    // // var student = new Student(1,"Van Minh Kiet", "TP Hue");
+    // // console.log(student.getInfor())
+    // var student = {
+    //     id: 1,
+    //     name:"Van Minh Kiet",
+    //     address:"TP HUE",
+    //     getInfor: funcion()
+    //
+    //
+    // }
+    let person = {
+        name: ['Van', 'Minh', 'Kiet'],
+        age : 18,
+        gender: 'male',
+        interests: ['Music', 'Study'],
+        bio: function (){
+            alert(this.name[0]+ ' '+this.name[1]+ ' '+this.name[2]+' is'+this.age+' years old. He likes ' + this.interests[0]+ ' and '+this.interests[1]+'.');
+        },
+        greeting: function (){
+            alert('Hi! I am'+ this.name[3]+'.');
+        }
+    };
+    person.bio();
+</script>
+</body>
+</html>
