@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+  let num = +prompt("GHI");
+  let giaiThua=1;
+  document.write("GT : " + gt(num));
+  function gt(num){
+      if (num===1){
+          giaiThua=1;
+      }else if (num>=2){
+          for (let i = 1; i<=num; i++){
+              giaiThua *= i;
+          }
+      }return giaiThua
+  }
+</script>
+</body>
+</html>
