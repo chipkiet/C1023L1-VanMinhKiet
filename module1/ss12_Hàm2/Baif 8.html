@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<h2>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</h2>
+<script>
+    let arr = [];
+    while(true){
+        let num = +prompt("Nhap so");
+        if (num % 1 !== 0){
+            break;
+        }else{
+            arr.push(num)
+
+        }}
+    document.write(arr + "<br>");
+    document.write(arr[arr.length-1]);
+    for (let i = 0, j= arr[arr.length-1]; i<j  ; i++, j--){
+        let bag = arr[i];
+        arr[i] = arr[j];
+        arr[j]= bag;
+        // let bag = arr[i];
+        // arr[i] = arr [arr.length-1];
+        // arr[arr.length-1] = bag;
+    }
+    document.write(arr);
+
+
+
+
+</script>
+</body>
+</html>
