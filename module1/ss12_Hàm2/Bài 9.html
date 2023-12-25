@@ -8,9 +8,65 @@
 <h2>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
     Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </h2>
 <script>
+
+// Cách 1 : Mảng, lặp, nếu
+
+    // let dem = 0;
+    // let arr =[];
+    // let bag = [];
+    // let motKT =  prompt("Nhập ký tự bất kỳ");
+    // bag.push(motKT);
+    // while (true){
+    //     let mangKT= prompt ("Nhập vào( dùng ! để khóa )");
+    //     if (mangKT === "!"){
+    //             break;
+    //     }else{
+    //         arr.push(mangKT)
+    //     }
+    // }
+    // document.write(bag + "<br>");
+    // document.write(arr + "<br>");
+    // for (let i = 0; i< arr.length; i++){
+    //     if (arr [i] == motKT) {
+    //         dem++
+    //     }else{
+    //         document.write("-1");
+    //     }
+    // }document.write("Số lần xuất hiện : ", dem)
+
+// Cách 2 :
+let mangKyTu =[];
+let kyTuCanKiemTra =  prompt("Nhập ký tự bất kỳ");
+while (true) {
+    let mangKT = prompt("Nhập vào( dùng ! để khóa )");
+    if (mangKT === "!") {
+        break;
+    } else {
+        mangKyTu.push(mangKT)
+    }
+}
+document.write(mangKyTu + "<br>");
+document.write(kyTuCanKiemTra+ "<br>");
+function demSoLanXuatHien(arr,kyTu){
     let dem = 0;
-    let arr =[];
-    let
+
+    for (let i = 0; i< arr.length; i++){
+        if (arr[i] === kyTu){
+            dem++;
+        }
+    }
+    return dem > 0 ? dem : -1;
+}
+let soLanXuatHien = demSoLanXuatHien(mangKyTu,kyTuCanKiemTra);
+if (soLanXuatHien !== -1 ){
+    document.write("Số lần xuâất hiện của " + kyTuCanKiemTra + " là : " + soLanXuatHien);
+}else {
+    document.write("Ký tự " + kyTuCanKiemTra + " không xuất hiện        ->  " + "-1")
+}
+
+
+
+
 </script>
 </body>
 </html>
