@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<pre id="demo"></pre>
+<script>
+
+    function drawTriangle(rows){
+        let output = "";
+        for (let i = 0; i < rows; i++) {
+            // Vòng lặp qua từng cột của dòng
+            for (let j = 0; j < 2 * rows - 1; j++) {
+                // Kiểm tra nếu là điểm thuộc tam giác rỗng
+                if (j === rows - 1 - i || j === rows - 1 + i || i === rows - 1) {
+                    output += "*";
+                } else {
+                    output += " ";
+                }
+            }
+            // Xuống dòng sau khi hoàn thành một dòng
+            output += "\n";
+        }
+
+        return output;
+    }
+    let rows = 5;
+    let triangle = drawTriangle(rows);
+
+    document.getElementById("demo").innerHTML= triangle;
+
+
+</script>
+</body>
+</html>

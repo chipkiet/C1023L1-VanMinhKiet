@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<pre id="demo"></pre>
+<script>
+    let hang ="";
+    function drawTriangle(num){
+        for (let i=0; i<num; i++){
+            for (let j=0; j<=i; j++){
+                if (j===0||j===i||i===num-1){
+                    hang += "*";
+                }else{
+                    hang +=" ";
+                }
+
+            }
+            hang += "</br>";
+        }return hang
+    }
+    let num =8;
+    let triangle = drawTriangle(num);
+    document.getElementById("demo").innerHTML=triangle;
+
+</script>
+
+
+</body>
+</html>
