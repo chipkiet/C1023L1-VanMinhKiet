@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+</head>
+<body>
+<script>
+    let arrA= [];
+    while (true){
+        let numA = +prompt("Nhập số a");
+        if ( numA % 1 !== 0 ){
+            break;
+        }else{
+            arrA.push(numA);
+        }
+    }
+    let arrB = [];
+    let sum = 0;
+    for (let i = 0; i< arrA.length; i++){
+            sum += arrA[i];
+            arrB.push(sum)
+    }
+    document.write(arrB)
+</script>
+</body>
+</html>
