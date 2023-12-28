@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<script>
+let numerators = [5,2,5,1];
+let denominators = [6,3,4];
+let maxFraction =0;
+for (let i = 0; i<numerators.length; i++){
+    for (let j =0; j< denominators.length ; j++){
+        if ( (denominators[j] / numerators[i])  > maxFraction){
+            maxFraction = (denominators[j] / numerators [i]);
+        }
+    }
+}document.write(maxFraction);
+</script>
+</body>
+</html>
