@@ -5,6 +5,31 @@
     <title>Task 2</title>
 </head>
 <body>
+<script>
+    let arrA= [];
+    let arrB =[];
+    while (true){
+        let numA = +prompt("inport number A");
 
+        if (numA % 1 !== 0){
+            break;
+        }else{
+            arrA.push(numA);
+        }}
+    while (true){
+        let numB = +prompt("inport number B");
+        if (numB % 1 !== 0){
+            break;
+        }else{
+            arrB.push(numB);
+        }
+    }
+    let missingValue = [];
+    for (let i= 0; i< arrA.length; i++) {
+       if (!arrB.includes(arrA[i])){
+           missingValue.push(arrA[i])
+       }
+    }document.write(missingValue);
+</script>
 </body>
 </html>
