@@ -27,7 +27,7 @@
     let missingValue = [];
     for (let i= 0; i< arrA.length; i++) {
        if (!arrB.includes(arrA[i])){
-           missingValue.push(arrA[i])
+           missingValue.push(...arrA[i])
        }
     }document.write(missingValue);
 </script>
