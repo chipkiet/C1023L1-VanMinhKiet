@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT1</title>
+</head>
+<body>
+<script>
+    let xauKyTu = "VaN           MINh kieT       DEp TraI       NhAT      qUA dAT";
+    function myFunction(xauKyTu){
+        let arr = xauKyTu.split(" ");
+        for (let i = 0;i <arr.length; i++){
+            arr[i] = arr[i].trim();
+            arr[i] = arr[i].charAt(0).toUpperCase() +arr[i].slice(1).toLowerCase();
+        }
+        let newString = arr.join(" ").replace(/\s+/g, ' ');
+        // replace(/\s+/g, ' ') như kiểu thay thằng ' ' cho thằng /\s+/g. Cú pháp replace nó thay thằng sau thay cho thằng trước, còn thăng /\s+/g nó kiếm toàn bộ sâu, chỉ biết nghĩ đến đó thoi chứ mình cũng mù tịt khoảng hiểu cái này =>>
+
+        return newString;
+    }
+    let result = myFunction(xauKyTu);
+    console.log(result);
+
+</script>
+</body>
+</html>

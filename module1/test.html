@@ -1,74 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html>
 <body>
+
+<h2>JavaScript Array Methods</h2>
+<h2>slice()</h2>
+
+<p>Array.slice() returns selected array elements as a new array:</p>
+
+
 <script>
-    // function Student(id,name,address){
-    //     this.id=id;
-    //     this.name=name;
-    //     this.address=address;
-    //     this.getInfor = function (){
-    //         return "Id = " + this.id + " Name = "+ this.name+ "Address = "+this.address;
-    //     }
-    // }
-    // var student = new Student(13,"Văn Minh Kiệt","Huế");
-    // console.log(student.getInfor());
 
-    // var student = {
-    //     id: 1,
-    //     name:"Van Minh Kiet",
-    //     address:"Hue",
-    //     getInfor: function (){
-    //         return "Id = " + this.id + " Name = "+ this.name+ "Address = "+this.address;
-    //     }
-    // }
-    // console.log(student.getInfor())
+    function normalizeString(inputString) {
+        // Tách xâu thành mảng các từ
+        let words = inputString.split(" ");
 
-    // let person = {
-    //     name: ["Minh","Kiet"],
-    //     age : 18,
-    //     gender: 'male',
-    //     interests: ['Book','Do'],
-    //     bio : function (){
-    //         return this.name[0] + " " +this.name[1] + " "+ "is "+this.age+" years old. He likes "+ this.interests[1]+ " "+ this.interests[0]
-    //     },
-    //     greeting: function (){
-    //         return 'Hi, i am' + this.name[0]+' '
-    //     }
-    // };
-    // console.log(person.greeting())
+        // Lặp qua từng từ để chuẩn hóa
+        for (let i = 0; i < words.length; i++) {
+            // Loại bỏ dấu cách ở đầu và cuối mỗi từ
+            words[i] = words[i].trim();
+            // Chuyển đổi chữ cái đầu của từ thành chữ hoa và các chữ cái còn lại thành chữ thường
+            words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+        }
 
+        // Kết hợp lại thành xâu chuẩn hóa và loại bỏ dấu cách liền nhau
+        let normalizedString = words.join(" ").replace(/\s+/g, ' ');
 
-    // function Person(first, last, age, eye){
-    //     this.firstName = first;
-    //     this.lastName = last;
-    //     this.age = age;
-    //     this.eye = eye;
-    // }
-    // let myFather = new Person('Van','Ty','51','black');
-    // let myMother = new Person('Thu','Hao','41','grown');
-    // document.write("The nationality of my father is" + myFather.lastName);
+        return normalizedString;
+    }
 
-
-    // function Person(first, last, age, eye){
-    //     this.firstName = first;
-    //     this.lastName= last;
-    //     this.age = age;
-    //     this.eyeColor= eye;
-    // }
-    // Person.prototype.name= function () {
-    //     return this.firstName + this.lastName
-    // };
-    //
-    // let myFather = new Person("Van", "Ty", "51"," Black");
-    // document.write("Ho so cua bo toi : " + myFather.name())
-
-
-
-
+    // Ví dụ sử dụng
+    let inputString = "   hello    world   example ";
+    let result = normalizeString(inputString);
+    console.log(result);
 </script>
+
 </body>
 </html>
