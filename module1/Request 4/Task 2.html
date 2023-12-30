@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+
+    function myFunction(num){
+        let dem = 0;
+        let arr = num.split('');
+        let uniqueChar = {};
+        let allChar =[];
+        for (let i=0; i< arr.length; i++) {
+            if (!uniqueChar[arr[i]]) {
+                uniqueChar[arr[i]] = true;
+                dem++;
+                allChar.push(arr[i]);
+            }
+
+        } return allChar;
+    }
+    let num ="abracadabra um ba la xi bua";
+    let result = myFunction(num);
+    console.log(result)
+    
+</script>
+</body>
+</html>
