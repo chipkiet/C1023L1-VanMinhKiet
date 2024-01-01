@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<script>
+    let s1= "aabccddasasfad";
+    let s2= "abcdf";
+    function myFunction(s1,s2){
+        let arrS1 = s1.split("");
+        let dem = 0;
+        for (let i = 0; i< arrS1.length; i++){
+            let kiemTraSuCoMat = s2.indexOf(arrS1[i]);
+            if (kiemTraSuCoMat !== -1){
+                dem ++;
+                s2 = s2.slice(0, kiemTraSuCoMat ) + s2.slice(kiemTraSuCoMat + 1);
+            }
+        }
+        return dem;
+    }
+    let result = myFunction(s1,s2);
+    console.log(result);
+</script>
+</body>
+</html>
