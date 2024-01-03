@@ -2,41 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>.</title>
+    <title>BT1</title>
 </head>
 <body>
 <script>
-let menu = {
-    1 : {name: "Cafe", cost : 10000},
-    2 : {name: "Cam vắt", cost: 15000},
-    3 : {name: "Nước ép cà rốt)" ,cost: 18000 },
-    4 : {name: "Nước ép cà chua" ,cost: 18000 },
-    5 : {name: "nước lọc" ,cost: 5000 },
-    6 : {name: "Nước   dừa",cost: 20000 },
-};
-console.log("Menu : " );
-for (let key in menu){
-    console.log(key + " : " + menu[key].name);
-}
-let totalAmount = 0;
-while( true) {
-    let choice = +prompt("Chọn loại nước bạn muốn ( 1- 7 )");
-    if (choice === 7){
-        console.log("Bạn đã kết thúc luượt mua")
-        break;
-    }else {
-        if (menu[choice]) {
-            let num = +prompt("Chọn số lượng nước");
-            let numberOfCost = menu[choice].cost * num;
-            console.log(`Bạn chọn ${num} ${menu[choice].name}, tổng tiền là : ${numberOfCost} vnd` ) ;
-            totalAmount += numberOfCost;
+    let menu = {
+        1 : {name: "Lòng xào dưa", cost: 30000},
+        2 : {name: "Bún đậu mắm tôm", cost: 35000},
+        3 : {name: "Salad", cost: 20000},
+        4 : {name: "Bún chả cá", cost: 25000},
+        5 : {name: "Nước đá xào mắm ớt", cost: 100000},
+        6 : {name: "Rock cô đai", cost: 10000000},
+    };
+    console.log("Menu của quán : " );
+    for (let i=1; i<7; i++){
+        console.log(i + " : " + menu[i].name);
+    }
+    let tongCost = 0;
+    while (true){
+        let food = +prompt("Nhập loại thực phẩm bạn muốn (1-7)")
+        if (food===7){
+            console.log("Bạn đã gọi xong");
+            break;
+        }else{
+            if (menu[food]){
+                let numOfFood = +prompt("Nhập số lượng sản phẩm mà bạn muốn");
+                let numOfCost = numOfFood * menu[food].cost;
+                console.log("Bạn chọn " +numOfFood +" "+ menu[food].name+ " với giá : " + numOfCost);
+                tongCost += numOfCost
+            }
         }
     }
-}
-console.log(`Tổng số tiền cần trả là ${totalAmount} vnd`);
-
+    console.log("Tổng số tiền phải trả là : " + tongCost)
 </script>
 </body>
 </html>
-
-<!--Đây là bài mà em có sử dụng đến chatGPT và kiến thức hay vãi chảo này đã được tiếp thu-->
