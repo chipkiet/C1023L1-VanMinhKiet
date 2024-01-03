@@ -6,19 +6,32 @@
 </head>
 <body>
 <script>
-    while (true){
-        let num1 = +prompt("Nhập số thứ nhất");
-        if (num1 % 2 !==0 ){
-            break;
-        }
-        let num2 = +prompt("Nhập số thứ hai");
-        if (num2 % 2 !==0){
-            break;
+    let m = +prompt("Nhap so m");
+    let n = +prompt("Nhap so n");
+let arr = [];
+for (let i=0; i<m; i++){
+    arr.push([])
+    for (let j=0; j<n; j++){
+        arr[i][j] = +prompt(`Nhập row ${i} và ${j}`);
+    }
+}
+function myFunction(m,n){
+    let sum = 0;
+    for (let i=0; i<arr.length; i++){
+        for (let j=0; j< arr[i].length; j++){
+            if (arr[i][j] % 2 ===0 ){
+                sum += arr[i][j]
+            }
         }
     }
-    function myFunction(num1,num2){
-        let
-    }
+return sum
+}
+let result = myFunction(m,n);
+document.write(result)
+
+
 </script>
 </body>
 </html>
+
+// Co su ho tro tu A Bui Xuan Long
