@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+<body>
+<script>
+
+    let a = +prompt("Tap số hàng");
+    let b = +prompt("Tap số cột");
+    let arr=[];
+    let char = [];
+    function myFunction(number){
+        if (number ===1 ){
+            return false;
+        }else if (number===2){
+            return true
+        }
+        for (let i =2 ; i< number; i++){
+            if (number % i ===0){
+                return false
+            }
+        }
+        return true
+    }
+    for (let i=0; i<a; i++){
+        arr.push([]);
+        for (let j=0; j<b; j++){
+            arr[i][j] = +prompt(`Tap row ${i} và ${j}`)
+        }
+    }
+    for (let i = 0; i< arr.length; i++){
+        for (let j = 0; j< arr[i].length; j++){
+            if (myFunction(arr[i][j])){
+                char.push(arr[i][j]);
+            }
+        }
+    }
+    console.log(char);
+
+</script>
+</body>
+</html>
