@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập số a");
+    let b = +prompt("Nhập số b");
+    let arr = [];
+    for (let i=0; i<a; i++){
+        arr.push([]);
+        for (let j=0; j< b; j++){
+            arr[i][j] = +prompt(`Nhập row của ${i} ${j}`)
+        }
+    }
+    let max = arr[0][0];
+    // let max_index = 0;
+    for (let i = 0; i< arr.length; i++){
+        for (let j=0; j<arr[i].length; j++){
+            if (max < arr[i][j]){
+                max = arr[i][j];
+            }
+        }
+    }
+    console.log("GTLN : " + max);
+    let min = arr[0][0];
+    for (let i = 0; i< arr.length; i++){
+        for (let j=0; j<arr[i].length; j++) {
+            if (min>arr[i][j]){
+                min=arr[i][j];
+            }
+        }
+        }
+    console.log("GTNN : " +min);
+
+</script>
+</body>
+</html>
